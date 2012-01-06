@@ -1,5 +1,8 @@
 package controllers;
 
+import java.util.Collection;
+
+import models.Question;
 import models.QuizModel;
 import play.data.validation.Required;
 import play.modules.gae.GAE;
@@ -17,7 +20,8 @@ public class Quiz extends BaseController {
     public static void show(String slug) {
     	QuizModel quiz = QuizModel.findBySlug(slug);
         notFoundIfNull(quiz);
-        render(quiz);
+        Collection<Question> questions = quiz.questions.fetch();
+        render(quiz, questions);
     }
 
     public static void create() {

@@ -2,3 +2,7 @@
 #{set title:quiz.name /}
 
 <h1>${quiz.name}</h1>
+
+#{list items:questions, as:'q'}
+	<label>${q}</label>
+#{/list}
