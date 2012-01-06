@@ -1,0 +1,15 @@
+#{extends 'main.html' /}
+#{set title:'Create a new quiz' /}
+
+#{form @Quiz.createPost()}
+
+    <p>
+        <label for="name">What's the name of your new quiz?</label>
+        <input type="text" name="name" id="name" size="60" />
+    </p>
+    
+    <p>
+        <input type="submit" value="Create"> or <a href="@{Quiz.index()}">Cancel</a>
+    </p>
+
+#{/form}

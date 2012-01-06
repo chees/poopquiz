@@ -1,0 +1,10 @@
+#{extends 'main.html' /}
+#{set title:user /}
+
+<h1>${}</h1>
+
+<ul>
+#{list items:quizzes, as:'quiz'}
+	<li><a href="/${quiz.slug}">${quiz.name}</a></li>
+#{/list}
+</ul>

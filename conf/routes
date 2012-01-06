@@ -13,3 +13,5 @@ GET     /public/                                staticDir:public
 
 # Catch all
 *       /{controller}/{action}                  {controller}.{action}
+
+GET     /{slug}                                 Quiz.show
