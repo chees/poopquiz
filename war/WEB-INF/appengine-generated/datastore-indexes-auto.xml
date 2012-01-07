@@ -1,4 +1,10 @@
-<!-- Indices written at Fri, 6 Jan 2012 17:11:12 CET -->
+<!-- Indices written at Sat, 7 Jan 2012 17:09:17 CET -->
 
-<datastore-indexes/>
+<datastore-indexes>
 
+    <!-- Used 1 time in query history -->
+    <datastore-index kind="QuizModel" ancestor="false" source="auto">
+        <property name="__key__" direction="desc"/>
+    </datastore-index>
+
+</datastore-indexes>

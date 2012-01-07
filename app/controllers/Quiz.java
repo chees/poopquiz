@@ -20,8 +20,9 @@ public class Quiz extends BaseController {
     public static void show(String slug) {
     	QuizModel quiz = QuizModel.findBySlug(slug);
         notFoundIfNull(quiz);
-        Collection<Question> questions = quiz.questions.fetch();
-        render(quiz, questions);
+        //Collection<Question> questions = quiz.questions.fetch();
+        //render(quiz, questions);
+        render(quiz);
     }
 
     public static void create() {

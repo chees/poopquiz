@@ -46,4 +46,8 @@ public class QuizModel extends Model {
 	public static QuizModel findBySlug(String slug) {
 		return all().filter("slug", slug).get();
 	}
+	
+	public String toString() {
+		return name;
+	}
 }

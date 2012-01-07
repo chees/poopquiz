@@ -1,18 +1,20 @@
 package models;
 
-import java.util.Collection;
-
+import siena.Column;
 import siena.Generator;
 import siena.Id;
 import siena.Model;
-import siena.Query;
+import siena.NotNull;
 
 public class Question extends Model {
 	@Id(Generator.AUTO_INCREMENT)
 	public Long id;
 	
+	@Column("quiz")
+	@NotNull
 	public QuizModel quiz;
 	
+	@NotNull
 	public String question;
 	
 	public String answer0;
